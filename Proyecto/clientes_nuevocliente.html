@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo Cliente - App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function mostrarCampos() {
+            const tipo = document.getElementById('tipo_cliente').value;
+            document.getElementById('datos_persona').style.display = tipo === 'persona' ? 'block' : 'none';
+            document.getElementById('datos_empresa').style.display = tipo === 'empresa' ? 'block' : 'none';
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-logo">⚖️ App</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="../expedientes/expedientes.html">Expedientes</a></li>
+            <li><a href="../agenda/agenda.html">Agenda</a></li>
+            <li><a href="../documentos/documentos.html">Documentos</a></li>
+        </ul>
+        <a href="login.html" class="logout-button">Cerrar sesión</a>
+    </nav>
+
+    <main class="main-content">
+        <h1>➕ Nuevo Cliente</h1>
+
+        <form action="#" method="POST" class="formulario">
+            <label for="tipo_cliente">Tipo de cliente</label>
+            <select id="tipo_cliente" name="tipo_cliente" onchange="mostrarCampos()" required>
+                <option value="">-- Seleccionar --</option>
+                <option value="persona">Persona</option>
+                <option value="empresa">Empresa</option>
+            </select>
+
+            <!-- Datos para Persona -->
+            <div id="datos_persona" style="display: none;">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" />
+
+                <label for="rut">RUT</label>
+                <input type="text" id="rut" name="rut" />
+            </div>
+
+            <!-- Datos para Empresa -->
+            <div id="datos_empresa" style="display: none;">
+                <label for="razon_social">Razón Social</label>
+                <input type="text" id="razon_social" name="razon_social" />
+
+                <label for="rut_empresa">RUT Empresa</label>
+                <input type="text" id="rut_empresa" name="rut_empresa" />
+            </div>
+
+            <!-- Comunes -->
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" />
+
+            <button type="submit">Guardar Cliente</button>
+        </form>
+
+        <div style="margin-top: 1rem;">
+            <a href="clientes.html" class="add-button">← Volver a la lista</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2025 App. Desarrollado por ti 🧠⚖️</p>
+    </footer>
+</body>
+
+</html>
