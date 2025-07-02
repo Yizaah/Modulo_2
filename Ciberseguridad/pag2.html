@@ -7,66 +7,109 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </head>
-<body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"> Ciberseguridad</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="pag2.html">Amenazas comunes</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="pag3.html">Consejos de seguirdad</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
-    <div id="carouselExampleDark" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <img src="..." class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="..." class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-            </div>
-        </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+<body class="bg-dark text-white"></body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark border-bottom border-secondary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Ciberseguridad</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pag2.html">Amenazas comunes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pag3.html">Consejos de seguridad</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+ <div class="container my-5 text-center">
+    <h1>Amenazas comunes en Ciberseguridad</h1>
+    <p class="lead">Conoce las amenazas más frecuentes y cómo afectan a los usuarios.</p>
+  </div>
+
+  <!-- Tarjetas de amenazas -->
+  <div class="container mb-5">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-danger">
+          <div class="card-body">
+            <h5 class="card-title text-danger">Phishing</h5>
+            <p class="card-text">Mensajes engañosos que imitan fuentes confiables para robar datos personales o bancarios.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-warning">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Ransomware</h5>
+            <p class="card-text">Bloquea el acceso a tus archivos y exige un pago para liberarlos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-info">
+          <div class="card-body">
+            <h5 class="card-title text-info">Malware</h5>
+            <p class="card-text">Software malicioso que puede dañar tu sistema, espiar tus datos o robar información.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-primary">
+          <div class="card-body">
+            <h5 class="card-title text-primary">DDoS</h5>
+            <p class="card-text">Ataques de denegación de servicio que colapsan servidores mediante tráfico masivo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carrusel de casos reales -->
+  <div class="container mb-5">
+    <h2 class="text-center mb-4">Casos reales</h2>
+    <div id="carouselExamples" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://source.unsplash.com/900x300/?hacker" class="d-block w-100" alt="Caso 1">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 text-white p-3 rounded">
+            <h5>El caso de phishing a una empresa bancaria (2022)</h5>
+            <p>Un correo falso llevó a miles de usuarios a entregar sus credenciales bancarias.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/900x300/?ransomware" class="d-block w-100" alt="Caso 2">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 text-white p-3 rounded">
+            <h5>Ataque de ransomware a un hospital</h5>
+            <p>Un hospital tuvo que pagar millones para recuperar acceso a sus archivos clínicos.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/900x300/?ddos" class="d-block w-100" alt="Caso 3">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 text-white p-3 rounded">
+            <h5>Ataque DDoS a un sitio gubernamental</h5>
+            <p>La página estuvo caída por más de 12 horas durante un proceso electoral.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExamples" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExamples" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
 </body>
 </html>
