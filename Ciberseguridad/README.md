@@ -12,8 +12,9 @@
   - Muestra tarjetas informativas sobre Phishing, Ransomware, Malware y DDoS, cada una con descripción y botón para ver más detalles.
   - Incluye un carrusel con casos reales reportados, donde al hacer clic en la imagen se despliega información adicional sobre cada caso.
 - `pag3.html`: Página con consejos de seguridad.
-  - Ofrece recomendaciones prácticas para protegerse en línea, como el uso de contraseñas seguras, actualización de software, precaución con enlaces sospechosos y respaldo de información.
-  - Presenta los consejos de forma clara y accesible para todo tipo de usuarios.
+  -  Lista de buenas prácticas para protegerse en línea, presentadas con claridad para todo tipo de usuarios. Entre ellas: uso de contraseñas seguras, verificación en dos pasos, precaución con enlaces sospechosos, respaldo de información, entre otras.
+  - Formulario de contacto con validación en JavaScript. Permite que los usuarios se comuniquen para recibir más información o ayuda personalizada.
+  - Modal interactivo con un test de seguridad, donde el usuario responde preguntas básicas y recibe retroalimentación inmediata.
 
 - `README.md`: Información sobre el proyecto.
 
