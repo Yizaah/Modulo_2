@@ -38,70 +38,116 @@
   </div>
 
   <!-- Tarjetas de amenazas -->
-  <div class="container mb-5">
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 border-danger">
-          <div class="card-body">
-            <h5 class="card-title text-danger">Phishing</h5>
-            <p class="card-text">Mensajes engañosos que imitan fuentes confiables para robar datos personales o bancarios.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 border-warning">
-          <div class="card-body">
-            <h5 class="card-title text-warning">Ransomware</h5>
-            <p class="card-text">Bloquea el acceso a tus archivos y exige un pago para liberarlos.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 border-info">
-          <div class="card-body">
-            <h5 class="card-title text-info">Malware</h5>
-            <p class="card-text">Software malicioso que puede dañar tu sistema, espiar tus datos o robar información.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 border-primary">
-          <div class="card-body">
-            <h5 class="card-title text-primary">DDoS</h5>
-            <p class="card-text">Ataques de denegación de servicio que colapsan servidores mediante tráfico masivo.</p>
+<div class="container py-5">
+  <h2 class="mb-4 text-center">Amenazas Comunes</h2>
+  <div class="row g-4">
+    
+    <!-- Tarjeta: Phishing -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card border-danger h-100">
+        <div class="card-body">
+          <h5 class="card-title text-danger"><i class="fas fa-envelope"></i> Phishing</h5>
+          <p class="card-text">Mensajes engañosos que imitan fuentes confiables.</p>
+          <button class="btn btn-outline-danger btn-sm btn-toggle" data-bs-toggle="collapse" data-bs-target="#phishing">Ver más</button>
+          <div class="collapse mt-2" id="phishing">
+            <p>Intentan robar contraseñas, datos bancarios o acceso a cuentas mediante correos o mensajes falsos.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Carrusel de casos reales -->
-  <div class="container mb-5">
-    <h2 class="text-center mb-4">Casos reales</h2>
-    <div id="carouselExamples" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://source.unsplash.com/900x300/?hacker" class="d-block w-100" alt="Caso 1">
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 text-white p-3 rounded">
-            <h5>El caso de phishing a una empresa bancaria (2022)</h5>
-            <p>Un correo falso llevó a miles de usuarios a entregar sus credenciales bancarias.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="https://source.unsplash.com/900x300/?ransomware" class="d-block w-100" alt="Caso 2">
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 text-white p-3 rounded">
-            <h5>Ataque de ransomware a un hospital</h5>
-            <p>Un hospital tuvo que pagar millones para recuperar acceso a sus archivos clínicos.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="https://source.unsplash.com/900x300/?ddos" class="d-block w-100" alt="Caso 3">
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 text-white p-3 rounded">
-            <h5>Ataque DDoS a un sitio gubernamental</h5>
-            <p>La página estuvo caída por más de 12 horas durante un proceso electoral.</p>
+    <!-- Tarjeta: Ransomware -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card border-warning h-100">
+        <div class="card-body">
+          <h5 class="card-title text-warning"><i class="fas fa-lock"></i> Ransomware</h5>
+          <p class="card-text">Bloquea archivos y pide rescate para desbloquear.</p>
+          <button class="btn btn-outline-warning btn-sm btn-toggle" data-bs-toggle="collapse" data-bs-target="#ransomware">Ver más</button>
+          <div class="collapse mt-2" id="ransomware">
+            <p>Se instala al abrir archivos adjuntos o enlaces maliciosos. Suele pedir pago en criptomonedas.</p>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Tarjeta: Malware -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card border-info h-100">
+        <div class="card-body">
+          <h5 class="card-title text-info"><i class="fas fa-bug"></i> Malware</h5>
+          <p class="card-text">Software malicioso que daña o espía tu sistema.</p>
+          <button class="btn btn-outline-info btn-sm btn-toggle" data-bs-toggle="collapse" data-bs-target="#malware">Ver más</button>
+          <div class="collapse mt-2" id="malware">
+            <p>Puede venir en descargas falsas o sitios web comprometidos. Afecta el rendimiento o privacidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta: DDoS -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card border-primary h-100">
+        <div class="card-body">
+          <h5 class="card-title text-primary"><i class="fas fa-network-wired"></i> DDoS</h5>
+          <p class="card-text">Colapsa servidores mediante tráfico masivo.</p>
+          <button class="btn btn-outline-primary btn-sm btn-toggle" data-bs-toggle="collapse" data-bs-target="#ddos">Ver más</button>
+          <div class="collapse mt-2" id="ddos">
+            <p>Se usan bots para saturar servicios web, dejándolos inaccesibles a usuarios reales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Carrusel de casos reales -->
+  <div class="container mb-5">
+    <h2 class="text-center mb-4">Casos reportados</h2>
+    <h5 class="text-center mb-4"></h5>Haz click en cada imagen para mas info!</h5>
+    <div id="carouselExamples" class="carousel slide" data-bs-ride="carousel">
+      
+      <!-- INICIO CARRUSEL, click a la imagen para desplegar la info -->
+      <div class="carousel-inner">
+
+        <!-- Caso 1 -->
+        <div class="carousel-item active">
+          <img src="https://dirinf.uct.cl/wp-content/uploads/Falso-23.jpg" class="d-block w-100 carousel-img" alt="Caso 1">
+          <div class="carousel-caption bg-dark bg-opacity-75 text-white p-3 rounded">
+            <h5>Nuevo phishing reportado que involucra a Correos de Chile</h5>
+            <p>El día 25 de mayo de 2023, el Equipo de Respuestas ante Incidentes de Seguridad de la Información (CSIRT) del Gobierno de Chile identificó un nuevo intento de fraude. Esta vez los ciberdelincuentes utilizaron el nombre de Correos de Chile con el fin de estafar a sus clientes. El mecanismo usado fue un mensaje de texto, similar al de la empresa: “CORREOS: Su paquete ha sido retenido por aduanas. Para el envío pague las tasas de (1700 CLP) accediendo al enlace”. Al abrir el enlace, el usuario se expone al robo de su nombre de usuario y contraseña.
+            </p>
+          </div>
+        </div>
+
+        <!-- Caso 2 -->
+        <div class="carousel-item">
+          <img src="https://media.biobiochile.cl/wp-content/uploads/2022/09/alerta-informatica-ransomware-pcs-poder-judicial--750x400.jpg" class="d-block w-100 carousel-img" alt="Caso 2">
+          <div class="carousel-caption bg-dark bg-opacity-75 text-white p-3 rounded">
+            <h5>Hackeo al Poder Judicial (septiembre 2022)</h5>
+            <p>
+              El 26 de septiembre el Poder Judicial avisó que advirtieron la presencia de un ransomware en su red, afectando a los sistemas con graves problemas. 150 equipos se vieron afectados, equivalentes al 1% de los que tiene dicho poder del Estado en el país. Se trató de un ciberataque que perjudicó dispositivos con Windows 7 y el antivirus McAfee. Esto derivó en suspensión de audiencias y restricciones a los funcionarios. El 29 de septiembre hubo un nuevo ataque a equipos con Windows 10, elevando el total a 700 dispositivos infectados. No se ha confirmado fuga de información, y las medidas adoptadas ayudaron a contener el incidente.
+            </p>
+          </div>
+        </div>
+
+        <!-- Caso 3 -->
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/900x300/?ddos" class="d-block w-100 carousel-img" alt="Caso 3">
+          <div class="carousel-caption bg-dark bg-opacity-75 text-white p-3 rounded">
+            <h5>Ataque DDoS a un sitio gubernamental</h5>
+            <p>
+              Durante un proceso electoral, un sitio web oficial del gobierno sufrió un ataque de denegación de servicio (DDoS)
+              que lo mantuvo inactivo por más de 12 horas. El tráfico masivo de bots colapsó los servidores, afectando el acceso
+              de los ciudadanos a información crítica sobre el proceso y los resultados preliminares.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- FIN CARRUSEL -->
+
+      <!-- CONTROLES -->
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExamples" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
@@ -110,6 +156,29 @@
       </button>
     </div>
   </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <!-- Script de interactividad -->
+  <script>
+    document.querySelectorAll('.carousel-item').forEach(item => {
+      const img = item.querySelector('img');
+      const caption = item.querySelector('.carousel-caption');
+      caption.style.display = 'none'; // Ocultar al inicio
+      img.addEventListener('click', () => {
+        caption.style.display = (caption.style.display === 'none') ? 'block' : 'none';
+      });
+    });
+
+    // Ocultar todas las captions al cambiar de slide
+    const carousel = document.querySelector('#carouselExamples');
+    carousel.addEventListener('slid.bs.carousel', () => {
+      document.querySelectorAll('.carousel-caption').forEach(caption => {
+        caption.style.display = 'none';
+      });
+    });
+  </script>
 
 </body>
 </html>
