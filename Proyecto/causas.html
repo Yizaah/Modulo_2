@@ -3,112 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nuevo Expediente - App</title>
-    <link rel="stylesheet" href="css/style.css">
-  <script>
-    function mostrarCampoRUC() {
-      const tipo = document.getElementById('tipo_expediente').value;
-      const campoRUC = document.getElementById('campo_ruc');
-      campoRUC.style.display = tipo === 'Penal' ? 'block' : 'none';
-    }
-  </script>
+  <title>Expedientes</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Navegación -->
   <nav class="navbar">
-    <div class="nav-logo">App</div>
+    <div class="nav-logo">Gestion de causas</div>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="clientes.html">Clientes</a></li>
       <li><a href="causas.html">Causas</a></li>
-      <li><a href="../agenda/agenda.html">Agenda</a></li>
-      <li><a href="../documentos/documentos.html">Documentos</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="documentos.html">Documentos</a></li>
     </ul>
     <a href="login.html" class="logout-button">Cerrar sesión</a>
   </nav>
 
   <main class="main-content">
-    <h1> Nueva Causa</h1>
-
-    <form class="formulario" action="#" method="POST">
-      <!-- ROL -->
-      <label for="rol">ROL</label>
-      <input type="text" id="rol" name="rol" required />
-
-      <!-- Cliente asociado -->
-      <label for="cliente">Cliente asociado</label>
-      <select id="cliente" name="cliente" required>
-        <option value="">-- Seleccionar cliente --</option>
-        <option value="1">Ana López</option>
-        <option value="2">Carlos Pérez</option>
-        <option value="3">Empresa XYZ S.A.</option>
-      </select>
-
-      <!-- Tipo de expediente -->
-      <label for="tipo_expediente">Tipo de expediente</label>
-      <select id="tipo_expediente" name="tipo_expediente" onchange="mostrarCampoRUC()" required>
-        <option value="">-- Seleccionar tipo --</option>
-        <option value="Civil">Civil</option>
-        <option value="Penal">Penal</option>
-        <option value="Laboral">Laboral</option>
-        <option value="Administrativo">Administrativo</option>
-      </select>
-
-      <!-- Campo RUC (solo para Penal) -->
-      <div id="campo_ruc" style="display: none;">
-        <label for="ruc">RUC</label>
-        <input type="text" id="ruc" name="ruc" />
-      </div>
-
-      <!-- Título -->
-      <label for="titulo">Título / Asunto</label>
-      <input type="text" id="titulo" name="titulo" required />
-
-      <!-- Descripción -->
-      <label for="descripcion">Descripción</label>
-      <textarea id="descripcion" name="descripcion" rows="4"></textarea>
-
-      <!-- Estado -->
-      <label for="estado">Estado</label>
-      <select id="estado" name="estado">
-        <option value="abierto">Abierto</option>
-        <option value="en_tramite">En trámite</option>
-        <option value="finalizado">Finalizado</option>
-        <option value="archivado">Archivado</option>
-      </select>
-
-      <!-- Juzgado -->
-      <label for="juzgado">Juzgado / Tribunal</label>
-      <input type="text" id="juzgado" name="juzgado" />
-
-      <!-- Abogado asignado -->
-      <label for="abogado">Abogado asignado</label>
-      <input type="text" id="abogado" name="abogado" value="Tu nombre" />
-
-      <!-- Notas internas -->
-      <label for="notas">Notas internas</label>
-      <textarea id="notas" name="notas" rows="3"></textarea>
-
-      <!-- Fijar plazos -->
-      <label for="plazo">Fijar plazo</label>
-      <input type="date" id="plazo" name="plazo" />
-      <input type="text" name="descripcion_plazo" placeholder="Descripción del plazo" />
-
-      <!-- Próxima audiencia -->
-      <label for="audiencia">Próxima audiencia</label>
-      <input type="date" id="audiencia" name="audiencia" />
-      <input type="text" name="descripcion_audiencia" placeholder="Descripción de la audiencia" />
-
-      <button type="submit">Guardar expediente</button>
-    </form>
-
-    <div style="margin-top: 1rem;">
-      <a href="expedientes.html" class="add-button">← Volver a la lista</a>
-    </div>
+    <h1>Expedientes</h1>
+    <button id="abrirModalCausa" class="add-button">➕ Nueva Causa</button>
+    <table id="tablaCausas" class="tabla">
+      <thead>
+        <tr>
+          <th>ROL</th>
+          <th>Cliente</th>
+          <th>Tipo</th>
+          <th>RUC</th>
+          <th>Título</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se agregan las causas -->
+      </tbody>
+    </table>
   </main>
-    <footer>
-        <p>&copy;2025 App. Desarrollado por Yitzhak Valenzuela, como parte de proyecto de curso Talento Digital para Chile, dictado por Skillnest</p>
-    </footer>
+
+  <!-- Modal Causa -->
+  <div id="modalCausa" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" id="cerrarModalCausa">&times;</span>
+      <form id="form_causa" class="formulario">
+        <label for="rol">ROL</label>
+        <input type="text" id="rol" name="rol" required />
+        <label for="cliente">Cliente asociado</label>
+        <select id="cliente" name="cliente" required>
+          <option value="">-- Seleccionar cliente --</option>
+          <option value="1">Ana López</option>
+          <option value="2">Carlos Pérez</option>
+          <option value="3">Empresa XYZ S.A.</option>
+        </select>
+        <label for="tipo_expediente">Tipo de expediente</label>
+        <select id="tipo_expediente" name="tipo_expediente" required>
+          <option value="">-- Seleccionar tipo --</option>
+          <option value="Civil">Civil</option>
+          <option value="Penal">Penal</option>
+          <option value="Laboral">Laboral</option>
+          <option value="Administrativo">Administrativo</option>
+        </select>
+        <div id="campo_ruc" style="display: none;">
+          <label for="ruc">RUC</label>
+          <input type="text" id="ruc" name="ruc" />
+        </div>
+        <label for="titulo">Título / Asunto</label>
+        <input type="text" id="titulo" name="titulo" required />
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado">
+          <option value="abierto">Abierto</option>
+          <option value="en_tramite">En trámite</option>
+          <option value="finalizado">Finalizado</option>
+          <option value="archivado">Archivado</option>
+        </select>
+        <button type="submit">Guardar expediente</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy;2025 App. Desarrollado por Yitzhak Valenzuela, como parte de proyecto de curso Talento Digital para Chile, dictado por Skillnest</p>
+  </footer>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
