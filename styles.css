@@ -1,0 +1,24 @@
+.menu a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.menu a:hover {
+    transform: scale(1.1);
+}
+
+.contenido h1 {
+    display: block;
+    color: #2c3e50;
+}
+
+.contenido p {
+    display: block;
+    font-size: 16px;
+}
