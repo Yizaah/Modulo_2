@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.galeria div {
+    width: 200px;
+    height: 200px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.galeria div:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #5321b1;
+    z-index: 2;
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.cerrar {
+    position: absolute;
+    top: 30px; right: 40px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-buttons {
+    position: absolute;
+    bottom: 40px;
+    left: 0; right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-buttons button {
+    background: #5321b1;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #e6dddd;
+    border-top: 1px solid #ff0000;
+}
+
+@media (max-width: 600px) {
+    .galeria {
+        gap: 8px;
+    }
+    .galeria div {
+        width: 70px;
+        height: 70px;
+        margin: 4px;
+    }
+    .galeria img {
+        border-radius: 8px;
+    }
+    .modal-content {
+        width: 60vw;
+        height: 60vw;
+        max-width: 70vw;
+        max-height: 70vh;
+    }
+    .nav-buttons {
+        bottom: 10px;
+        gap: 10px;
+    }
+    .cerrar {
+        top: 10px;
+        right: 16px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-content {
+        width: 98vw;
+        height: 50vw;
+    }
+}
